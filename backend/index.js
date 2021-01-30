@@ -28,6 +28,7 @@ const db = admin.firestore();
 */
 
 app.get('/projects', (request, response) => {
+  response.set('Access-Control-Allow-Origin', '*')
   let projects = []
   db.collection('projects').get().then(snapshot => {
     snapshot.forEach((doc) => {

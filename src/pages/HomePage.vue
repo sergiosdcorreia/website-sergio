@@ -69,8 +69,20 @@ export default {
         },
 
       ],
-      expanded: false
+      expanded: false,
     }
+  },
+  methods: {
+    getPosts() {
+      this.$axios.get('http://localhost:3000/projects').then(response => {
+        this.projects = response.data
+      }).catch(err => {
+        console.log('err: ', err)
+      })
+    }
+  },
+  created() {
+    this.getPosts()
   }
 }
 </script>
