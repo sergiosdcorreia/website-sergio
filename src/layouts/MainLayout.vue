@@ -11,6 +11,10 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
+        <q-avatar class="q-ml-md">
+          <img src="SergioFoto200.png">
+        </q-avatar>
+
         <q-toolbar-title>
           Sérgio Correia
         </q-toolbar-title>
@@ -19,22 +23,64 @@
 
     <q-drawer
       v-model="leftDrawerOpen"
+      class="text-grey-1"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-grey-10"
     >
       <q-list>
         <q-item-label
           header
-          class="text-grey-8"
+          class="text-grey-1"
         >
-          Sergio Correia
+          Menu
         </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item
+          to="/"
+          active-class="menu-active"
+          class="text-grey-1"
+          clickable
+          exact
+        >
+          <q-item-section
+            avatar
+          >
+            <q-icon name="home" color="grey-1" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Home</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item
+          to="/photography"
+          active-class="menu-active"
+          class="text-grey-1"
+          clickable
+        >
+          <q-item-section
+            avatar
+          >
+            <q-icon name="camera" color="grey-1" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Photo Gallery</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item
+          to="/about"
+          active-class="menu-active"
+          class="text-grey-1"
+          clickable
+        >
+          <q-item-section
+            avatar
+          >
+            <q-icon name="info" color="grey-1" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>About</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -45,44 +91,19 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksData = [
-  {
-    title: 'Home',
-    icon: 'home',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Photography',
-    icon: 'camera',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Blog',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'About',
-    icon: 'info',
-    link: 'https://chat.quasar.dev'
-  }
-];
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
   data () {
     return {
       leftDrawerOpen: false,
-      essentialLinks: linksData
+      tab: 'mails'
     }
   }
 }
 </script>
+
+<style lang="sass">
+  .menu-active
+    color: #FF824A !important
+</style>
