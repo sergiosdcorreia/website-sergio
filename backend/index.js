@@ -39,6 +39,21 @@ app.get('/projects', (request, response) => {
 })
 
 /*
+  endpoint - photos
+*/
+
+app.get('/photos', (request, response) => {
+  response.set('Access-Control-Allow-Origin', '*')
+  let photos = []
+  db.collection('photos').get().then(snapshot => {
+    snapshot.forEach((doc) => {
+      photos.push(doc.data())
+    })
+    response.send(photos)
+  })
+})
+
+/*
   listen
 */
 
