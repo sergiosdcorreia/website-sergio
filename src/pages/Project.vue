@@ -1,18 +1,11 @@
 <template>
   <q-page class="bg-page">
-    <div class="page-title flex flex-center row">
-      <div class="col-12 col-md-4">
-        <p class="text-white text-h5">Sergio Correia is a frontend developer, who builds a better web</p>
-        <p class="text-white">He also photographs sometimes, feel free to fork some code or get in touch to build <b>sergiosdcorreia@gmail.com</b></p>
-      </div>
-    </div>
     <template
       v-if="!loadingProjects"
     >
+      <div>Project Page</div>
       <div class="flex fit row wrap justify-center">
         <q-card
-          v-for="project in projects"
-          :key="project.id"
           class="my-card bg-grey-10 q-ma-md col-sm-12 col-md-6"
           bordered
           flat
@@ -38,13 +31,7 @@
           </q-card-actions> -->
 
           <q-card-actions>
-            <q-btn
-              :to="{name: 'project', params: { id: project.id }}"
-              color="primary"
-              label="View project"
-              flat
-              append
-            />
+            <q-btn flat color="primary" label="View project" />
           </q-card-actions>
         </q-card>
       </div>
@@ -76,7 +63,10 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'Project',
+  props: [
+    'id'
+  ],
   data() {
     return {
       projects: [],
@@ -96,6 +86,9 @@ export default {
         })
         this.loadingProjects = false
       })
+    },
+    getProject(id) {
+      return this.projects.find(project => project.id === id)
     }
   },
   created() {
