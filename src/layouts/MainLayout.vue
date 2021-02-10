@@ -67,6 +67,21 @@
           </q-item-section>
         </q-item>
         <q-item
+          to="/whoishe"
+          active-class="menu-active"
+          class="text-grey-1"
+          clickable
+        >
+          <q-item-section
+            avatar
+          >
+            <q-icon name="account_box" color="grey-1" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Who Is He?</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item
           to="/about"
           active-class="menu-active"
           class="text-grey-1"
