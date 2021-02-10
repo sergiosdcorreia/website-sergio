@@ -1,9 +1,9 @@
 <template>
   <q-page class="bg-page">
     <div class="page-title flex flex-center row">
-      <div class="col-12 col-md-4">
-        <p class="text-white text-h5">Sergio Correia is a frontend developer, who builds a better web</p>
-        <p class="text-white">He also photographs sometimes, feel free to fork some code or get in touch to build <b>sergiosdcorreia@gmail.com</b></p>
+      <div class="col-12 col-md-4 q-px-md">
+        <p class="text-white text-h4 text-weight-bold">Sérgio Correia is a frontend developer, who builds a better web</p>
+        <p class="text-white text-subtitle1">He also takes photographs sometimes, feel free to fork some code or get in touch to build <b>sergiosdcorreia@gmail.com</b></p>
       </div>
     </div>
     <template
