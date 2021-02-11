@@ -6,6 +6,9 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
+let API_PRODUCTION = 'https://website-sergio.herokuapp.com'
+let API_DEV = 'http://localhost:3000'
+
 module.exports = function (/* ctx */) {
   return {
     // https://quasar.dev/quasar-cli/supporting-ts
@@ -43,6 +46,9 @@ module.exports = function (/* ctx */) {
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
+      env: {
+        API: API_PRODUCTION // API_DEV || API_PRODUCTION
+      },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
       // transpile: false,

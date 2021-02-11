@@ -1,5 +1,11 @@
 <template>
   <q-page class="page-title flex flex-center">
+    <div class="flex flex-center page-height row">
+      <div class="col-12 col-md-4 q-px-md">
+          <p class="text-white text-h4 text-weight-bold">A self taught photographer</p>
+          <p class="text-white text-subtitle1">He loves the feeling of pushing the camera's shutter button.</p>
+      </div>
+    </div>
     <div class="flex fit row wrap justify-center">
       <q-card
         v-for="photo in photos"
@@ -32,7 +38,7 @@ export default {
   methods: {
     getPhotos() {
       this.loadingPhotos = true
-      this.$axios.get('http://localhost:3000/photos').then(response => {
+      this.$axios.get(`${ process.env.API }/photos`).then(response => {
         this.photos = response.data
         this.loadingPhotos = false
       }).catch(err => {
@@ -53,6 +59,8 @@ export default {
 <style lang="sass" scoped>
 .page-title
   background-color: #24272B
+.page-height
+  height: 80vh
 .my-card
   width: 100%
   max-width: 300px

@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header>
       <q-toolbar>
         <q-btn
           flat
@@ -11,6 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
+        <!--
         <q-avatar class="q-ml-md">
           <img src="SergioFoto200.png">
         </q-avatar>
@@ -18,6 +19,7 @@
         <q-toolbar-title>
           Sérgio Correia
         </q-toolbar-title>
+        -->
       </q-toolbar>
     </q-header>
 
@@ -111,8 +113,7 @@ export default {
   name: 'MainLayout',
   data () {
     return {
-      leftDrawerOpen: false,
-      tab: 'mails'
+      leftDrawerOpen: false
     }
   }
 }
@@ -121,4 +122,6 @@ export default {
 <style lang="sass">
   .menu-active
     color: #FF824A !important
+  .q-layout__section--marginal
+    background-color: #27282B
 </style>
