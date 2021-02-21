@@ -1,4 +1,6 @@
 {
   
-  "vetur.experimental.templateInterpolationService": true
+  "vetur.experimental.templateInterpolationService": true,
+  "jshint.enable": false,
+  "tslint.enable": false
 }
