@@ -31,12 +31,6 @@
       content-class="bg-grey-10"
     >
       <q-list>
-        <q-item-label
-          header
-          class="text-grey-1"
-        >
-          Menu
-        </q-item-label>
         <q-item
           to="/"
           active-class="menu-active"

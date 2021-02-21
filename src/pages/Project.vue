@@ -3,10 +3,9 @@
     <template
       v-if="!loadingProjects"
     >
-      <div>Project Page</div>
-      <div class="flex fit row wrap justify-center">
+      <div class="flex fit justify-center">
         <q-card
-          class="my-card bg-grey-10 q-ma-md col-sm-12 col-md-6"
+          class="my-card bg-grey-10 q-ma-md"
           bordered
           flat
         >
@@ -29,10 +28,7 @@
               <li>JAVASCRIPT</li>
             </ul>
           </q-card-actions> -->
-
-          <q-card-actions>
-            <q-btn flat color="primary" label="View project" />
-          </q-card-actions>
+          
         </q-card>
       </div>
     </template>
@@ -69,14 +65,22 @@ export default {
   ],
   data() {
     return {
+      projectId: this.$route.params.id,
       projects: [],
       loadingProjects: false
+    }
+  },
+  computed: {
+    project() {
+      return this.projects.find(
+        project => project.id === this.projectId
+      )
     }
   },
   methods: {
     getProjects() {
       this.loadingProjects = true
-      this.$axios.get('http://localhost:3000/projects').then(response => {
+      this.$axios.get(`${ process.env.API }/projects`).then(response => {
         this.projects = response.data
         this.loadingProjects = false
       }).catch(err => {
@@ -87,9 +91,9 @@ export default {
         this.loadingProjects = false
       })
     },
-    getProject(id) {
-      return this.projects.find(project => project.id === id)
-    }
+    //getProject(id) {
+    //  return this.projects.find(project => project.id === id)
+    //}
   },
   created() {
     this.getProjects()
@@ -105,9 +109,9 @@ export default {
 .my-card
   background-color: #24272B
   width: 100%
-  max-width: 350px
+  max-width: 1200px
   height: fit-content
 .skeleton-card
   width: 100%
-  max-width: 350px
+  max-width: 1200px
 </style>

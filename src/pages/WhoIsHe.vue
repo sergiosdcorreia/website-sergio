@@ -1,9 +1,9 @@
 <template>
   <q-page class="page-title flex flex-center">
-    <div class="row">
-      <div class="col-12 col-md-4 q-px-md">
+    <div class="flex flex-center row">
+      <div class="col-12 col-md-6 q-px-md">
           <p class="text-white text-h4 text-weight-bold">Who is he?</p>
-          <p class="text-white text-subtitle1">Sérgio is a frontend developer with a creative background in design, arts and crafts, and architecture.</p>
+          <p class="text-white text-subtitle1">Sérgio is a frontend developer with a creative background in arts and crafts, design and architecture.</p>
       </div>
     </div>
   </q-page>

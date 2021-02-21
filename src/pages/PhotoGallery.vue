@@ -1,7 +1,7 @@
 <template>
   <q-page class="page-title flex flex-center">
     <div class="flex flex-center page-height row">
-      <div class="col-12 col-md-4 q-px-md">
+      <div class="col-12 col-md-6 q-px-md">
           <p class="text-white text-h4 text-weight-bold">A self taught photographer</p>
           <p class="text-white text-subtitle1">He loves the feeling of pushing the camera's shutter button.</p>
       </div>

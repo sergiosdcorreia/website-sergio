@@ -3,7 +3,7 @@
     <div class="page-title flex flex-center row">
       <div class="col-12 col-md-4 q-px-md">
         <p class="text-white text-h4 text-weight-bold">Sérgio Correia is a creative frontend developer, who builds a better web</p>
-        <p class="text-white text-subtitle1">Sometimes he also takes photographs, feel free to fork some code or get in touch to build <b>sergiosdcorreia@gmail.com</b></p>
+        <p class="text-white text-subtitle1">Sometimes he also takes photographs <q-btn to="/photography" padding="none" icon="camera_alt" flat></q-btn>, feel free to fork some code <q-btn type="a" href="https://github.com/sergiosdcorreia" target="__blank" padding="none" icon="eva-github" flat></q-btn> or get in touch to build <b>sergiosdcorreia@gmail.com</b></p>
       </div>
     </div>
     <template
