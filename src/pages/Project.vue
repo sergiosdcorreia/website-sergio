@@ -9,10 +9,6 @@
           bordered
           flat
         >
-          <q-img
-            :src="project.thumbnail"
-          />
-
           <q-card-section>
             <div class="text-overline text-orange-9">{{ project.area }}</div>
             <div class="text-h5 text-white q-mt-sm q-mb-xs">{{ project.title }}</div>
@@ -20,6 +16,25 @@
               {{ project.description }}
             </div>
           </q-card-section>
+          <q-img
+            :src="project.thumbnail"
+          />
+          <div v-if="project.image1">
+            <q-img
+              :src="project.image1"
+            />
+          </div>
+          <div v-if="project.image2">
+            <q-img
+              :src="project.image2"
+            />
+          </div>
+          <div v-if="project.image3">
+            <q-img
+              :src="project.image3"
+            />
+          </div>
+
 
           <!-- <q-card-actions>
             <ul>
@@ -28,7 +43,7 @@
               <li>JAVASCRIPT</li>
             </ul>
           </q-card-actions> -->
-          
+
         </q-card>
       </div>
     </template>
